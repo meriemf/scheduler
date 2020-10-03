@@ -6,7 +6,7 @@ import "components/InterviewerListItem.scss";
 export default function InterviewerList(props) {
   //const [interviewer, setInterviewer] = useState(props.interviewer || null);
 
-  const array = props.interviewers.map ( interviewer => <InterviewerListItem 
+  const array = props.interviewers.map( interviewer => <InterviewerListItem 
     key = {interviewer.id}
     name = {interviewer.name} 
     avatar = {interviewer.avatar} 

@@ -20,4 +20,12 @@ for (let item in state.interviewers) {
 }
 }
 
-export default {getAppointmentsForDay, getInterview};
+
+export function getInterviewersForDay(state, day) {
+  const object = state.days.filter(item => item.name === day);
+  const result = object[0] ? object[0].interviewers.map(id => state.interviewers[id]) : [];
+  return result;
+}
+
+
+export default {getAppointmentsForDay, getInterviewersForDay, getInterview};
