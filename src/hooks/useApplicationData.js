@@ -33,18 +33,22 @@ export default function useApplicationData () {
       ...state.appointments,
       [id]: appointment
     };
+    for (let day of state.days) {
+      day['name'] === state.day && day['spots']--;
+     }
+   
     const promise = axios.put(`http://localhost:8001/api/appointments/${id}`, appointment)
     .then (res => {
       setState({
         ...state, appointments
        })
      })
-  //  .catch ()
        return promise;
   };
   
   
   function cancelInterview(id) {
+   
     const appointment = {
       ...state.appointments[id],
       interview: null
@@ -53,6 +57,9 @@ export default function useApplicationData () {
       ...state.appointments,
       [id]: appointment
     };
+   for (let day of state.days) {
+     day['name'] === state.day && day['spots']++;
+    }
     const promise = axios.delete(`http://localhost:8001/api/appointments/${id}`, appointment ).then(res => {
       setState({
         ...state,

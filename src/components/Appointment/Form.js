@@ -41,5 +41,3 @@ return (
 </main>
 );
 }
-
-// InterviewerList interviewers={props.interviewers} interviewer = {interviewer} value={props.interviewer} onChange={setInterviewer}

@@ -2,10 +2,7 @@ import React from "react";
 import "components/Appointment/styles.scss";
 import Button from "components/Button";
 
-export default function Confirm(props) {
-  
-  
-  
+export default function Confirm(props) {  
 return (
 
 <main className="appointment__card appointment__card--confirm">

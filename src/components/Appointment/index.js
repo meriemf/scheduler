@@ -36,8 +36,6 @@ export default function Appointment (props) {
       interviewer
     };
     transition(SAVING);
-    //props.bookInterview(props.id, interview);
-    //transition(SHOW);
     props.bookInterview(props.id, interview)
     .then(() => transition(SHOW))
     .catch(error => transition(ERROR_SAVE, true));
@@ -103,14 +101,3 @@ export default function Appointment (props) {
     
   );
 }
-
-/*return (
-  <article className="appointment">
-  <Fragment>
-  <Header time={props.time}/>
-
-  {props.interview? <Show student={props.interview.student} interviewer={props.interview.interviewer.name} />: <Empty id={props.id} time={props.time}/> }
-  </Fragment>
-  </article>  
-);
-*/
