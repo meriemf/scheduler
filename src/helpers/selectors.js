@@ -22,7 +22,8 @@ export function getAppointmentsForDay(state, day) {
 // }
 
 
-export function getInterview(state, interview) {
+export  function getInterview(state, interview) {
+  
   let result= {};  
    if (!interview) {
      return null;
@@ -59,11 +60,11 @@ export function getInterview(state, interview) {
  // }
  // return result;
 //}
-export function getInterviewersForDay(state, day) {
+export  function getInterviewersForDay(state, day) {
   const object = state.days.filter(item => item.name === day);
   const result = object[0] ? object[0].interviewers.map(id => state.interviewers[id]) : [];
   return result;
 }
 
 
-export default {getAppointmentsForDay, getInterviewersForDay, getInterview};
+export default {getInterview, getInterviewersForDay, getAppointmentsForDay };

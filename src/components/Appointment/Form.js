@@ -1,7 +1,7 @@
-import React from "react";
+import React,{ useState } from "react";
 import InterviewerList from "components/InterviewerList" 
 import Button from "components/Button";
-import { useState } from 'react'
+
 
 import "components/Appointment/styles.scss";
 
