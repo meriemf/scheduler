@@ -35,7 +35,6 @@ export default function Application(props) {
 
   }, []);
   function bookInterview(id, interview) {
-    console.log(id, interview);
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
@@ -46,17 +45,34 @@ export default function Application(props) {
     };
     const promise = axios.put(`http://localhost:8001/api/appointments/${id}`, appointment)
     .then (res => {
-      //console.log(res)
-      
-    })
+       })
+
+    .catch ()
     setState({
       ...state, appointments
      })
-  //return promise;
+   return promise;
   };
 
 
-  
+  function cancelInterview(id) {
+    const appointment = {
+      ...state.appointments[id],
+      interview: null
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    const promise = axios.delete(`http://localhost:8001/api/appointments/${id}`, appointment ).then(res => {
+      setState({
+        ...state,
+        appointments
+      });
+    })
+    return promise;
+  };
+
   return (
   <main className="layout">
   
@@ -91,11 +107,10 @@ export default function Application(props) {
           interview={interview}
           interviewers={interviewersArray}  
           bookInterview={bookInterview}
+          cancelInterview={cancelInterview}
            />)
 
-        })}
-
-        
+        })}        
          <Appointment key="last" time="5pm" />
     </section>
   

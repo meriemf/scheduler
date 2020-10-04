@@ -6,10 +6,6 @@ import { useState } from 'react'
 import "components/Appointment/styles.scss";
 
 export default function Form(props) {
- // console.log(props);
-  
-//const [name, setName] = useState("");
-//const [interviewer, setInterviewer] = useState("");
 const [name, setName] = useState(props.name || "");
 const [interviewer, setInterviewer] = useState(props.interviewer || null);
 
