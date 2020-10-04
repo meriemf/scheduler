@@ -6,6 +6,7 @@ import { useState } from 'react'
 import "components/Appointment/styles.scss";
 
 export default function Form(props) {
+ // console.log(props);
   
 //const [name, setName] = useState("");
 //const [interviewer, setInterviewer] = useState("");
@@ -38,12 +39,11 @@ return (
   <section className="appointment__card-right">
     <section className="appointment__actions">
       <Button danger onClick = {cancel}>Cancel</Button>
-      <Button confirm onClick = {()=>props.onSave(name, interviewer)}>Save</Button>
+      <Button confirm onClick = {()=>{props.onSave(name, interviewer)}}>Save</Button>
     </section>
   </section>
 </main>
 );
 }
-
 
 // InterviewerList interviewers={props.interviewers} interviewer = {interviewer} value={props.interviewer} onChange={setInterviewer}
