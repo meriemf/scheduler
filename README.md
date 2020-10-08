@@ -19,7 +19,7 @@ npm test
 ## Running Storybook Visual Testbed
 
 ```sh
-npm r!["Scheduler"] (un storybook
+npm r!["Scheduler"] (un storybook)
 ```
 ## Screenshots 
 !["Scheduler"](https://raw.githubusercontent.com/meriemf/scheduler/master/docs/Scheduler.png)
