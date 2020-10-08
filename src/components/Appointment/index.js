@@ -57,17 +57,18 @@ export default function Appointment (props) {
   transition(EDIT);
  }
   return (
-    <article className="appointment">
+    <article data-testid="appointment" className="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SAVING && <Status message="Saving"/>}
       {mode === CONFIRM && <Confirm
-      message = "Delete appointement?"
+      message = "Are you sure you would like to delete?"
       onConfirm = {deleting}
       onCancel = {back}
       />}
       {mode === SHOW && (
         <Show          
+          
           student={props.interview.student}
           interviewer={props.interview.interviewer.name}
           onDelete = {confirm}

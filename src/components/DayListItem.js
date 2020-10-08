@@ -11,10 +11,10 @@ const dayClass = classnames ("li", {
   "day-list__item--full": props.spots === 0,
 })
   const formatSpots = function (props) {
-  return (props.spots === 0 ? 'no spots remaining': props.spots === 1 ? '1 spot remaining' : props.spots === 2 ? '2 spots remaining':props.spots) ;
+  return (props.spots === 0 ? 'no spots remaining': props.spots === 1 ? '1 spot remaining' : props.spots === 2 ? '2 spots remaining':`${props.spots} spots remaining`) ;
   }
     return (
-    <li className={dayClass} onClick={() => props.setDay(props.name)}>
+    <li data-testid="day" className={dayClass} onClick={() => props.setDay(props.name)}>
       <h2 className="text--regular"> {props.name}</h2> 
       <h3 className="text--light">{formatSpots(props)}</h3>
     </li>

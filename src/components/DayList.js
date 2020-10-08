@@ -17,6 +17,5 @@ const array = props.days.map ( day => <DayListItem
    {array}
   </ul>
   ) 
-
-  }
+}
 
