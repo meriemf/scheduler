@@ -36,7 +36,7 @@ storiesOf("Button", module)
   ));
   
   
-  storiesOf("DayListItem", module) //Initiates Storybook and registers our DayListItem component
+storiesOf("DayListItem", module) //Initiates Storybook and registers our DayListItem component
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   }) // Provides the default background color for our component
@@ -66,7 +66,7 @@ storiesOf("Button", module)
     },
   ];
   
-  storiesOf("DayList", module)
+storiesOf("DayList", module)
     .addParameters({
       backgrounds: [{ name: "dark", value: "#222f3e", default: true }],
     })
@@ -84,7 +84,7 @@ storiesOf("Button", module)
       avatar: "https://i.imgur.com/LpaY82x.png"
     };
     
-    storiesOf("InterviewerListItem", module)
+storiesOf("InterviewerListItem", module)
       .addParameters({
         backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
       })
@@ -122,7 +122,7 @@ storiesOf("Button", module)
       ];
 
       
-      storiesOf("InterviewerList", module)
+storiesOf("InterviewerList", module)
         .addParameters({
           backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
         })
