@@ -22,6 +22,6 @@ npm test
 npm r!["Scheduler"] (un storybook
 ```
 ## Screenshots 
-!["Scheduler"] (https://raw.githubusercontent.com/meriemf/scheduler/master/docs/Scheduler.png)
-!["Book Appointment"] (https://raw.githubusercontent.com/meriemf/scheduler/master/docs/Create-appointment.png)
+!["Scheduler"](https://raw.githubusercontent.com/meriemf/scheduler/master/docs/Scheduler.png)
+!["Book Appointment"](https://raw.githubusercontent.com/meriemf/scheduler/master/docs/Create-appointment.png)
 !["Delete Appointment"](https://raw.githubusercontent.com/meriemf/scheduler/master/docs/Delete-appointment.png)
