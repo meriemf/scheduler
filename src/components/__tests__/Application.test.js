@@ -11,7 +11,7 @@ it("defaults to Monday and changes the schedule when a new day is selected", () 
   return waitForElement(() => getByText("Monday"));
 });
 
-xit("changes the schedule when a new day is selected", () => {
+it("changes the schedule when a new day is selected", () => {
   const { getByText } = render(<Application />);
 
   return waitForElement(() => getByText("Monday")).then(() => {
@@ -114,7 +114,7 @@ debug();
 it("shows the save error when failing to save an appointment", () => {
   axios.put.mockRejectedValueOnce();
 
-  const { container, debug } = render(<Application />);
+  const { container } = render(<Application />);
 
   await waitForElement(() => getByText(container, "Archie Cohen"));
 
